@@ -1,0 +1,12 @@
+# Special files and folders
+node_modules
+*.md
+
+# Generated files
+*.js
+out
+build
+dist
+dist/
+build/
+generated/
