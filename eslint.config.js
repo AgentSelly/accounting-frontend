@@ -12,6 +12,10 @@ export default tseslint.config(
       ...tseslint.configs.recommended,
     ],
     files: ['**/*.{ts,tsx}'],
+    ignores: [
+      'node_modules',
+      'dist',
+    ],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
