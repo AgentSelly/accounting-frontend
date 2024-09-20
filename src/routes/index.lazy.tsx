@@ -1,4 +1,5 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
+import SecondNavbar from '../components/SecondNavbar'
 
 export const Route = createLazyFileRoute('/')({
   component: Index,
@@ -6,9 +7,15 @@ export const Route = createLazyFileRoute('/')({
 
 function Index() {
   return (
-    <div className="min-h-screen border-4 border-green-500 w-full rounded-2xl p-2 font-title">
-      <h1>Welcome Home!</h1>
-      
-    </div>
+    <>
+      <SecondNavbar />
+      <div className="min-h-screen w-full border-4 border-green-500 rounded-md p-2">
+        <h1 className='text-4xl text-center mb-5'>Welcome Home!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda blanditiis
+          dolorem officia provident sequi pariatur necessitatibus sed quaerat voluptatum
+          totam illo, architecto, itaque praesentium harum obcaecati quae dignissimos
+          laudantium sint.</p>
+      </div>
+    </>
   )
 }
