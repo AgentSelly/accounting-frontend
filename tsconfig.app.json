@@ -22,9 +22,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "strictNullChecks": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "~/*": [
+      "src/*": [
         "./src/*"
       ]
     }

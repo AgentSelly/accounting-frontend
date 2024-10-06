@@ -1,9 +1,8 @@
-import React, { StrictMode } from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen'
 
-import App from './App.tsx';
 import './main.css';
 
 const router = createRouter({ routeTree})
@@ -19,6 +18,3 @@ if (!rootElement.innerHTML) {
     </StrictMode>
   )
 }
-
-
-
