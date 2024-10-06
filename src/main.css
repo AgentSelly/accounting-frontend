@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+@import '@fontsource/inria-sans/300.css';
+@import '@fontsource/inria-sans/400.css';
+@import '@fontsource/inria-sans/700.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+     font-family: 'Inria Sans', sans-serif;
+}

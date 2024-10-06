@@ -1,18 +1,53 @@
-import { createRootRoute, Link, Outlet, useAwaited } from "@tanstack/react-router";
-import Navbar from "../components/Navbar";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
+import Navbar from "src/components/Navbar";
+import Header from "src/components/Header";
+
+const props = {
+  links: [
+    {
+      label: 'HOME',
+      to: '/'
+    },
+
+    {
+      label: 'ABOUT',
+      to: '/about',
+     },
+    {
+      label: 'LOGIN',
+      to: '/login',
+    }
+  ],
+};
+
+const props2 = {
+  links: [
+    {
+      label: 'Home',
+      to: '/'
+    },
+
+    {
+      label: 'About',
+      to: '/about',
+     },
+    {
+      label: 'Login',
+      to: '/login',
+    }
+  ],
+};
 
 export const Route = createRootRoute({
 
      component: () => (
-          <>
-               <header className="border-4 border-slate-600 rounded-md mb-2 flex items-center">
-                    <img src="src\assets\react.svg" className="p-2"></img>
-                    <h1 className="text-3xl">My company</h1>
-               </header>
-               <main className="flex gap-2 h-screen ">
-                    <Navbar />
+          <div className="flex gap-2 h-screen ">
+               <Navbar {...props} />
+               <Navbar {...props2} />
+               <main >
+                    <Header />
                     <Outlet />
                </main>
-          </>
+          </div>
      ),
 })

@@ -7,4 +7,11 @@ export default defineConfig({
   plugins: [
     TanStackRouterVite(),
     react()],
+  resolve: {
+    alias: {
+      src: "/src",
+    },
+  },
+
 });
+

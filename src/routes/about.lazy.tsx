@@ -6,7 +6,6 @@ export const Route = createLazyFileRoute('/about')({
 
 function About() {
   return (
-    <>
       <div className="min-h-screen w-full border-4 border-green-500 rounded-md p-2 relative"> 
         <div>
           <h1 className='text-4xl text-center mb-5'>About us</h1>
@@ -16,6 +15,5 @@ function About() {
           </p>
         </div>
       </div>
-    </>
   )
 }
