@@ -12,7 +12,7 @@ interface NavbarLink {
 
 export default function Navbar(props: NavbarProps) {
   return (
-    <nav className="border-4 border-blue-400 w-1/6 rounded-md">
+    <nav className="w-[200px] border-4 border-blue-400 rounded-md">
       <ul className="p-2">
         {props.links.map((link) =>
           <li key={link.to}>

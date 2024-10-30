@@ -7,13 +7,13 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
-  return <div className="flex gap-2 h-screen ">
-    <Navbar links={primaryNavigationLinks} />
-    <main >
-      <Header />
+  return <main className="flex flex-col w-screen h-screen overflow-hidden">
+    <Header />
+    <div className="flex flex-row w-full h-full">
+      <Navbar links={primaryNavigationLinks} />
       <Outlet />
-    </main>
-  </div>;
+    </div>
+  </main>;
 }
 
 const primaryNavigationLinks = [
