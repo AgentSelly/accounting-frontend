@@ -11,17 +11,16 @@ interface NavbarLink {
 }
 
 export default function Navbar(props: NavbarProps) {
-
-  const listItems = props.links.map(link =>
-    <li><Link to={link.to} className="uppercase">{link.label}</Link></li>
-  );
-
   return (
     <nav className="border-4 border-blue-400 w-1/6 rounded-md">
       <ul className="p-2">
-        {listItems}
+        {props.links.map((link) =>
+          <li key={link.to}>
+            <Link to={link.to} className="uppercase">{link.label}</Link>
+          </li>
+        )}
       </ul>
     </nav>
-  )  
+  )
 }
 
