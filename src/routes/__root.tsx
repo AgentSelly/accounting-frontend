@@ -11,7 +11,9 @@ function RootComponent() {
     <Header />
     <div className="flex flex-row w-full h-full">
       <Navbar links={primaryNavigationLinks} />
-      <Outlet />
+      <div className="flex-1">
+        <Outlet />
+      </div>
     </div>
   </main>;
 }

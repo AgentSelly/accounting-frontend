@@ -6,18 +6,18 @@ export const Route = createLazyFileRoute('/login')({
 
 function Login() {
   return (
-      <div className="min-h-screen w-full border-4 border-green-500 rounded-md p-2">
+    <div className="border-4 border-green-500 rounded-md p-2">
       <div className="flex flex-col justify-center">
-        <img src="src\assets\avatar.svg" className='w-24 h-24'/>
+        <img src="src\assets\avatar.svg" className='w-24 h-24' />
         <form>
-            <label>Enter your name:
+          <label>Enter your name:
             <input type="text" />
           </label>
           <label>Enter your email:
             <input type="text" />
-            </label>
+          </label>
         </form>
-      </div>  
       </div>
+    </div>
   )
 }
