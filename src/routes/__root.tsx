@@ -2,52 +2,33 @@ import { createRootRoute, Outlet } from "@tanstack/react-router";
 import Navbar from "src/components/Navbar";
 import Header from "src/components/Header";
 
-const props = {
-  links: [
-    {
-      label: 'HOME',
-      to: '/'
-    },
-
-    {
-      label: 'ABOUT',
-      to: '/about',
-     },
-    {
-      label: 'LOGIN',
-      to: '/login',
-    }
-  ],
-};
-
-const props2 = {
-  links: [
-    {
-      label: 'Home',
-      to: '/'
-    },
-
-    {
-      label: 'About',
-      to: '/about',
-     },
-    {
-      label: 'Login',
-      to: '/login',
-    }
-  ],
-};
-
 export const Route = createRootRoute({
+  component: RootComponent,
+});
 
-     component: () => (
-          <div className="flex gap-2 h-screen ">
-               <Navbar {...props} />
-               <Navbar {...props2} />
-               <main >
-                    <Header />
-                    <Outlet />
-               </main>
-          </div>
-     ),
-})
+function RootComponent() {
+  return <main className="flex flex-col w-screen h-screen overflow-hidden">
+    <Header />
+    <div className="flex flex-row w-full h-full">
+      <Navbar links={primaryNavigationLinks} />
+      <div className="flex-1">
+        <Outlet />
+      </div>
+    </div>
+  </main>;
+}
+
+const primaryNavigationLinks = [
+  {
+    label: 'Home',
+    to: '/',
+  },
+  {
+    label: 'About',
+    to: '/about',
+  },
+  {
+    label: 'Login',
+    to: '/login',
+  }
+];
