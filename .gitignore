@@ -368,3 +368,5 @@ pnpm-debug.log*
 
 dist-ssr
 *.local
+
+/src/routeTree.gen.ts
