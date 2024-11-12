@@ -10,7 +10,8 @@ function RootComponent() {
   return <main className="flex flex-col w-screen h-screen overflow-hidden">
     <Header />
     <div className="flex flex-row w-full h-full">
-      <Navbar links={primaryNavigationLinks} />
+      <Navbar links={primaryNavigationLinks} type='primary' />
+      <Navbar links={secondaryNavigationLinks} type='secondary'/>
       <div className="flex-1">
         <Outlet />
       </div>
@@ -19,6 +20,21 @@ function RootComponent() {
 }
 
 const primaryNavigationLinks = [
+  {
+    label: 'Home',
+    to: '/',
+  },
+  {
+    label: 'About',
+    to: '/about',
+  },
+  {
+    label: 'Login',
+    to: '/login',
+  },
+];
+
+const secondaryNavigationLinks = [
   {
     label: 'Home',
     to: '/',
