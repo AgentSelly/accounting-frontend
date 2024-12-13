@@ -1,6 +1,7 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import Navbar from "src/components/Navbar";
 import Header from "src/components/Header";
+import PageWrapper from "src/components/PageWrapper";
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -11,10 +12,10 @@ function RootComponent() {
     <Header />
     <div className="flex flex-row w-full h-full">
       <Navbar links={primaryNavigationLinks} type='primary' />
-      <Navbar links={secondaryNavigationLinks} type='secondary'/>
-      <div className="flex-1">
+      <Navbar links={secondaryNavigationLinks} type='secondary' />
+      <PageWrapper>
         <Outlet />
-      </div>
+      </PageWrapper>
     </div>
   </main>;
 }
