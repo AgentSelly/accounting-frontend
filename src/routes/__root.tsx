@@ -12,7 +12,7 @@ function RootComponent() {
     <Header />
     <div className="flex flex-row w-full h-full">
       <Navbar links={primaryNavigationLinks} type='primary' />
-      <Navbar links={secondaryNavigationLinks} type='secondary'/>
+      <Navbar links={secondaryNavigationLinks} type='secondary' />
       <PageWrapper>
         <Outlet />
       </PageWrapper>

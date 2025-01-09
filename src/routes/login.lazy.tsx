@@ -24,9 +24,3 @@ function Login() {
       </div>
   )
 }
-
-
-/*<label className="label justify-start cursor-pointer">
-              <input type="checkbox" className="toggle" defaultChecked />
-              <p className="label-text font-bold pl-2">Remember me for 30 days</p>
-</label>*/
